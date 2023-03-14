@@ -22,13 +22,13 @@ $container: 1200px;
 .container{
   margin: 0 auto;
   max-width: $container;
-  padding-top: 60px;
+ /* padding-top: 60px;*/
 }
   .header{
     display: flex;
     justify-content: space-between;
     max-width: $container;
-
+    padding-top: 60px;
   }
   .logo{
     display: flex;
@@ -141,6 +141,8 @@ margin-top: 60px;
     display: flex;
     justify-content:center;
     margin-top: 20px;
+    margin-bottom: 87px;
+    margin-top: 80px;
     
   }
   .about-pets {
@@ -175,5 +177,142 @@ color: #4C4C4C;
 margin-bottom: 25px;
 
   }
+  .friends{
+    background: #F6F6F6;
+    height: 877px;
+  }
+  .friends-title_block{
+    margin: 0 auto;
+    max-width: 400px;
+    padding-top: 45px;
+    padding-bottom: 25px;
+  }
+  .friends-title{
+    font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 35px;
+line-height: 130%;
+letter-spacing: 0.06em;
+color: #545454;
+text-align: center;
 
- 
+  }
+  .btn-left{
+    display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+    width: 52px;
+height: 52px;
+border: 2px solid #F1CDB3;
+border-radius: 100px;
+&:hover{
+  background: #FDDCC4;
+}
+  }
+  .btn-right{
+    display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+    width: 52px;
+height: 52px;
+border: 2px solid #F1CDB3;
+border-radius: 100px;
+&:hover{
+  background: #FDDCC4;
+}
+  }
+  .slider{
+    display: flex;
+align-items: center;
+justify-content: space-between
+  }
+  .slider-wrapper{
+    display: flex;
+    max-width: 1080px;
+   overflow: hidden;
+  }
+  .slider-pets{
+    display: flex;
+    position: relative;
+   left: -1080px
+  }
+  .item{
+    display: flex;
+    justify-content: space-evenly
+
+
+  }
+.card-pets{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 270px;
+  background-color: #FAFAFA;
+  margin-left: 45px;
+  margin-right: 45px;
+}
+.name-pets{
+  font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 23px;
+letter-spacing: 0.06em;
+color: #545454;
+margin-top: 25px;
+}
+.btn-pets{
+ width: 187px;
+height: 52px;
+margin-top: 30px;
+margin-bottom: 30px;
+background-color: #FAFAFA;
+border: 2px solid #F1CDB3;
+border-radius: 100px;
+font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 130%;
+letter-spacing: 0.06em;
+color: #292929;
+cursor: pointer;
+&:hover{
+  background: #FDDCC4;
+}
+
+}
+
+.btn-get__know{
+ margin: 0 auto ;
+ display: block;
+  margin-top: 60px;
+  
+  font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+font-size: 17px;
+line-height: 130%;
+letter-spacing: 0.06em;
+color: #292929;
+width: 261px;
+height: 52px;
+background: #F1CDB3;
+border-radius: 100px;
+border: none;
+cursor: pointer;
+}
+/*
+@keyframes move-right{
+  from {left: -1080px}
+  to{left: 0px}
+}
+
+.transition-right{
+  animation-name: move-right;
+  animation-duration: 5s;
+}
+*/
