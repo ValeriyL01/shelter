@@ -322,6 +322,54 @@ li {
   cursor: pointer;
 }
 
+.help-title {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin-top: 80px;
+}
+
+.help-blocks {
+  display: flex;
+  justify-content: space-between;
+  width: 1026px;
+  margin: 0 auto;
+  margin-top: 60px;
+}
+
+.help-blocks-2 {
+  display: flex;
+  justify-content: space-between;
+  width: 858px;
+  margin: 0 auto;
+  margin-top: 55px;
+  margin-bottom: 100px;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* width: 167px;*/
+  height: 113px;
+}
+
+.name-block {
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+  color: #545454;
+  margin-top: 30px;
+}
+
 /*
 @keyframes move-right{
   from {left: -1080px}
