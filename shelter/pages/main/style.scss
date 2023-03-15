@@ -3,6 +3,7 @@ $container: 1200px;
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
   }
   
   a {
@@ -210,6 +211,7 @@ height: 52px;
 border: 2px solid #F1CDB3;
 border-radius: 100px;
 transition: 0.5s;
+cursor: pointer;
 &:hover{
   background: #FDDCC4;
 }
@@ -224,6 +226,7 @@ height: 52px;
 border: 2px solid #F1CDB3;
 border-radius: 100px;
 transition: 0.5s;
+cursor: pointer;
 &:hover{
   background: #FDDCC4;
 }
@@ -257,6 +260,7 @@ justify-content: space-between
   background-color: #FAFAFA;
   margin-left: 45px;
   margin-right: 45px;
+  cursor: pointer;
 }
 .name-pets{
   font-family: 'Georgia';
@@ -362,6 +366,8 @@ margin-top: 30px;
 .donation{
   background: #F6F6F6;
   padding-top: 80px;
+  padding-bottom: 120px;
+  background-size: cover;
 }
 .donation-container{
   display: flex;
@@ -423,6 +429,115 @@ margin-bottom: 20px;
   align-items: center;
   color: #B2B2B2;
 }
+
+.footer {
+  background-image: url("../../assets/images/footer-gradient-background.jpg");
+  background: url(noise_lines_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
+  height: 350px;
+  .contacts-title {
+    font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  
+  }
+}
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 22px;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  max-width: 280px;
+}
+
+.email {
+display: flex;
+align-items: flex-end;
+margin-bottom: 40px;
+}
+.email-text {
+  font-family: 'Georgia';
+font-style: normal;
+font-weight: 400;
+  font-size: 20px;
+  line-height: 115%;
+  color: #F1CDB3;
+  letter-spacing: 0.06em;
+}
+.email-icon{
+  margin-right: 20px;
+}
+.phone-icon{
+  margin-right: 20px;
+}
+.phone {
+  display: flex;
+align-items: flex-end;
+margin-bottom: 40px;
+}
+
+.adress{
+  max-width: 302px;
+}
+.adress-title {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 35px;
+  line-height: 130%;
+  letter-spacing: 0.06em;
+  color: #FFFFFF;
+  margin-bottom: 33px;
+  
+}
+.adress-street {
+  display: flex;
+align-items: flex-end;
+margin-bottom: 28px;
+}
+.marker-icon {
+  margin-right: 20px;
+  padding-bottom: 10px;
+}
+
+.street-text {
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    color: #F1CDB3;
+    letter-spacing: 0.06em;
+}
+.sity-text{
+  font-family: 'Georgia';
+  font-style: normal;
+  font-weight: 400;
+    font-size: 20px;
+    line-height: 115%;
+    color: #F1CDB3;
+    letter-spacing: 0.06em;
+}
+.adress-sity {
+  display: flex;
+ 
+align-items: center;
+  margin-bottom: 40px;
+
+}
+.footer-puppy{
+  background-image: url("../../assets/images/footer-puppy.png");
+  height: 310px;
+  width: 300px;
+  margin-top: 20px;
+}
+
 /*
 @keyframes move-right{
   from {left: -1080px}
