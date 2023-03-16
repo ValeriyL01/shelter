@@ -73,7 +73,6 @@ li {
   color: #CDCDCD;
   margin-left: 35px;
   padding-bottom: 4px;
-  transition: 0.5s;
 }
 .nav-link:hover {
   color: #FAFAFA;
@@ -120,6 +119,10 @@ li {
 }
 
 .notonly-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -313,8 +316,10 @@ li {
 }
 
 .btn-get__know {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0 auto;
-  display: block;
   margin-top: 60px;
   font-family: "Georgia";
   font-style: normal;
@@ -484,6 +489,7 @@ li {
   display: flex;
   align-items: flex-end;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .email-text {
@@ -494,10 +500,12 @@ li {
   line-height: 115%;
   color: #F1CDB3;
   letter-spacing: 0.06em;
+  cursor: pointer;
 }
 
 .email-icon {
   margin-right: 20px;
+  cursor: pointer;
 }
 
 .phone-icon {
@@ -508,6 +516,7 @@ li {
   display: flex;
   align-items: flex-end;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .adress {
@@ -529,11 +538,13 @@ li {
   display: flex;
   align-items: flex-end;
   margin-bottom: 28px;
+  cursor: pointer;
 }
 
 .marker-icon {
   margin-right: 20px;
   padding-bottom: 10px;
+  cursor: pointer;
 }
 
 .street-text {
@@ -544,6 +555,7 @@ li {
   line-height: 115%;
   color: #F1CDB3;
   letter-spacing: 0.06em;
+  cursor: pointer;
 }
 
 .sity-text {
@@ -554,12 +566,14 @@ li {
   line-height: 115%;
   color: #F1CDB3;
   letter-spacing: 0.06em;
+  cursor: pointer;
 }
 
 .adress-sity {
   display: flex;
   align-items: center;
   margin-bottom: 40px;
+  cursor: pointer;
 }
 
 .footer-puppy {
