@@ -281,6 +281,9 @@ li {
   margin-right: 45px;
   cursor: pointer;
 }
+.card-pets:hover {
+  box-shadow: 1px 1px 1px 1px #CDCDCD;
+}
 
 .name-pets {
   font-family: "Georgia";
@@ -583,14 +586,15 @@ li {
   margin-top: 20px;
 }
 
-/*
-@keyframes move-right{
-  from {left: -1080px}
-  to{left: 0px}
+@keyframes move-right {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0px;
+  }
 }
-
-.transition-right{
+.transition-right {
   animation-name: move-right;
   animation-duration: 5s;
-}
-*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

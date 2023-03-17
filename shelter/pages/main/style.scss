@@ -265,7 +265,9 @@ justify-content: space-between
   margin-left: 45px;
   margin-right: 45px;
   cursor: pointer;
-
+  &:hover{
+    box-shadow: 1px 1px 1px 1px #CDCDCD;
+  }
 }
 .name-pets{
   font-family: 'Georgia';
@@ -555,7 +557,7 @@ align-items: center;
   margin-top: 20px;
 }
 
-/*
+
 @keyframes move-right{
   from {left: -1080px}
   to{left: 0px}
@@ -565,4 +567,3 @@ align-items: center;
   animation-name: move-right;
   animation-duration: 5s;
 }
-*/
