@@ -723,7 +723,7 @@ margin-right: 0px;
     position: relative;
    
     margin-top: 20px;
-    margin-right: 43px;
+    margin-right: 52px;
     transition: 0.5s;
   }
   .btn-line {
@@ -747,6 +747,10 @@ margin-right: 0px;
   
   .nav-list {
     position: absolute;
+  position: fixed;
+width: 320px;
+
+    height: 100%;
     left: 0px;
     top: 0px;
     right: 0px;
@@ -756,16 +760,17 @@ margin-right: 0px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transform: translateY(-100%);
+    transform: translateX(-100%);
     transition: 0.5s ;
-    padding-top: 400px;
-    padding-left: 0px;
+    padding-top: 100px;
+    padding-right: 0px;
+    padding-left: 0;
   }
   .nav-item{
     margin-bottom: 40px;
   }
   .nav-list-open .nav-list {
-    transform: translateY(-30%);
+    transform: translateX(0%);
     
   }
   .nav-list-open .menu-btn{

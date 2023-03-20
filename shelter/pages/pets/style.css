@@ -299,7 +299,8 @@ li {
   background: url(noise_lines_transparent@2X.png), radial-gradient(110.67% 538.64% at 5.73% 50%, #513D2F 0%, #1A1A1C 100%), #211F20;
   height: 350px;
 }
-.footer .contacts-title {
+
+.contacts-title {
   font-family: "Georgia";
   font-style: normal;
   font-weight: 400;
@@ -417,4 +418,193 @@ li {
   height: 310px;
   width: 300px;
   margin-top: 20px;
+}
+
+.menu-btn {
+  display: none;
+}
+
+@media (max-width: 1140px) {
+  .container {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .pets-cards {
+    max-width: 580px;
+    margin: 0 auto;
+    height: 1380px;
+    overflow: hidden;
+  }
+  .pets-title {
+    margin-bottom: 0px;
+  }
+  .button-pagination {
+    margin-top: 55px;
+    padding-bottom: 75px;
+  }
+}
+@media (max-width: 1000px) {
+  .footer {
+    height: auto;
+  }
+  .footer-content {
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding-top: 0px;
+  }
+  .donation-container {
+    flex-direction: column-reverse;
+    align-items: center;
+    height: auto;
+    width: 505px;
+  }
+  .contacts-title {
+    margin-top: 30px;
+  }
+  .adress-title {
+    margin-top: 30px;
+  }
+}
+@media (max-width: 767px) {
+  .logo {
+    margin-left: 10px;
+    position: relative;
+    z-index: 5;
+  }
+  .text {
+    position: relative;
+    z-index: 5;
+  }
+  .nav-list {
+    display: none;
+  }
+  .menu-btn {
+    width: 30px;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    margin-top: 20px;
+    margin-right: 43px;
+    transition: 0.5s;
+  }
+  .btn-line {
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    left: 0px;
+    background: #F1CDB3;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  .btn-line:nth-child(1) {
+    top: 0px;
+  }
+  .btn-line:nth-child(2) {
+    top: 9px;
+  }
+  .btn-line:nth-child(3) {
+    top: 18px;
+  }
+  .nav-list {
+    position: absolute;
+    position: fixed;
+    width: 320px;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    margin-top: 0px;
+    background-color: #292929;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateX(-100%);
+    transition: 0.5s;
+    padding-top: 100px;
+    padding-right: 0px;
+    padding-left: 0;
+  }
+  .nav-item {
+    margin-bottom: 40px;
+  }
+  .nav-link:hover {
+    color: #F6F6F6;
+  }
+  .nav-link:active {
+    color: #F6F6F6;
+    border-bottom: 3px solid #F1CDB3;
+  }
+  .nav-list-open .nav-list {
+    transform: translateX(0%);
+  }
+  .nav-list-open .menu-btn {
+    transform: rotate(90deg);
+    transition: 0.5s;
+  }
+  .nav-link {
+    font-size: 32px;
+    margin-left: 0px;
+  }
+}
+@media (max-width: 641px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  .logo {
+    margin-left: 0px;
+  }
+  .footer-content {
+    width: 300px;
+    margin: 0 auto;
+  }
+  .contacts-title {
+    font-size: 25px;
+    text-align: center;
+  }
+  .adress-title {
+    font-size: 25px;
+    text-align: center;
+    margin-top: 5px;
+  }
+  .footer-puppy {
+    background-size: cover;
+    width: 260px;
+    height: 269px;
+  }
+  .email {
+    margin-left: 15px;
+    margin-top: 10px;
+  }
+  .phone {
+    margin-left: 15px;
+  }
+  .adress-title__block {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 250px;
+  }
+  .adress-street {
+    margin-bottom: 35px;
+  }
+  .adress-sity {
+    margin-bottom: 15px;
+  }
+}
+@media (max-width: 560px) {
+  .pets-title {
+    font-size: 25px;
+    padding-top: 42px;
+    margin-bottom: 10px;
+  }
+  .pets-cards {
+    max-width: 270px;
+  }
+  .button-pagination {
+    padding-bottom: 42px;
+  }
 }/*# sourceMappingURL=style.css.map */
