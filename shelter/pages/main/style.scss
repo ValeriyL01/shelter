@@ -34,7 +34,10 @@ $container270:270px;
     display: flex;
     justify-content: space-between;
     max-width: $container;
-    padding-top: 60px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+
+   
   }
   .logo{
     display: flex;
@@ -593,7 +596,8 @@ display: none;
   animation-name: move-right;
   animation-duration: 5s;
 }
-*/
+
+
 @media(max-width: 1180px){
   .slider-wrapper{
     max-width: 580px;
@@ -627,6 +631,7 @@ display: none;
   }
   .header{
     padding-top: 30px;
+    padding-bottom: 0px;
   }
   .puppy{
     max-width: 569px;
@@ -708,7 +713,7 @@ margin-right: 0px;
 }
 @media(max-width: 767px){
   .logo{
-    margin-left: 10px;
+    margin-left: 20px;
   }
   .nav-list{
     display: none;
@@ -723,7 +728,7 @@ margin-right: 0px;
     position: relative;
    
     margin-top: 20px;
-    margin-right: 52px;
+    margin-right: 20px;
     transition: 0.5s;
   }
   .btn-line {
@@ -811,11 +816,7 @@ width: 320px;
 
 
 @media(max-width: 570px){
-  /*
-  .container{
-   max-width: $container270;
-  }
-  */
+  
   .notonly-title {
     text-align: center;
     font-size:7.81vw ;
@@ -981,3 +982,4 @@ margin-top: 30px;
     margin-bottom: 15px;
   }
 }
+*/

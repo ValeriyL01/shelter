@@ -20,7 +20,7 @@ $container: 1200px;
   margin: 0 auto;
   max-width: $container;
  
- /* padding-top: 60px;*/
+ 
 }
 .container-header{
   margin-bottom: 30px;
@@ -408,6 +408,7 @@ align-items: center;
 .menu-btn {
   display: none;
 }
+/*
 @media(max-width: 1140px){
   .container{
     padding-left: 30px;
@@ -453,9 +454,11 @@ align-items: center;
 }
 @media(max-width: 767px){
   .logo{
-    margin-left: 10px;
+    
     position: relative;
     z-index: 5;
+    margin-left: 10px;
+    left:10px
   }
   .text{
     position: relative;
@@ -474,7 +477,7 @@ align-items: center;
     position: relative;
    
     margin-top: 20px;
-    margin-right: 43px;
+    margin-right: 10px;
     transition: 0.5s;
   }
   .btn-line {
@@ -482,7 +485,7 @@ align-items: center;
     width: 30px;
     height: 2px;
     left: 0px;
-    background:#F1CDB3;
+    background:black;
     border-radius: 2px;
     transition: .3s;
   }
@@ -606,3 +609,4 @@ width: 320px;
     padding-bottom: 42px;
   }
 }
+*/
