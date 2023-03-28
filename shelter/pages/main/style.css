@@ -21,10 +21,17 @@ li {
   width: 100%;
 }
 
+#start-background {
+  background-color: #000000;
+}
+
 .container {
   margin: 0 auto;
   max-width: 1200px;
-  /* padding-top: 60px;*/
+}
+
+.body-lock {
+  overflow: hidden;
 }
 
 .header {
@@ -149,6 +156,7 @@ li {
   background-image: url("../../assets/images/start-screen-puppy.png");
   background-size: contain;
   background-repeat: no-repeat;
+  background-position: center bottom;
   width: 698px;
   height: 728px;
   margin-top: 60px;
@@ -284,10 +292,15 @@ li {
   background-color: #FAFAFA;
   margin-left: 45px;
   margin-right: 45px;
+  border-radius: 10px;
+  transition: 0.5s;
   cursor: pointer;
 }
 .card-pets:hover {
-  box-shadow: 1px 1px 1px 1px #CDCDCD;
+  box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
+}
+.card-pets:hover .btn-pets {
+  background: #FDDCC4;
 }
 
 .name-pets {
@@ -613,136 +626,286 @@ li {
   display: none;
 }
 
-/*
-@keyframes move-right{
-  from {left: -1080px}
-  to{left: 0px}
+.popup {
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(41, 41, 41, 0.6);
+  top: 0;
+  left: 0;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
 }
 
-.transition-right{
+.popup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.popup-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 952px;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.btn-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.btn-popup:hover {
+  background: #FDDCC4;
+}
+
+.popup_body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  width: 900px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  padding: 30px 10px;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #000000;
+}
+
+.images-pets_popup {
+  background-image: url("../../assets/images/jennifer.png");
+  width: 500px;
+  height: 500px;
+}
+
+.pets-description {
+  width: 350px;
+}
+
+.name {
+  margin-top: 50px;
+  margin-bottom: 20px;
+  font-size: 35px;
+  line-height: 110%;
+}
+
+.type {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 20px;
+  line-height: 110%;
+}
+
+.breed {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 110%;
+}
+
+.age {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.age-pets {
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.inoculations {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.inoculations-pets {
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.diseases {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.diseases-pets {
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.parasites {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.parasites-pets {
+  font-weight: 400;
+  line-height: 110%;
+}
+
+@keyframes move-right {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: -2160px;
+  }
+}
+.transition-right {
   animation-name: move-right;
-  animation-duration: 5s;
+  animation-duration: 3s;
 }
 
+@keyframes move-left {
+  from {
+    left: -1080px;
+  }
+  to {
+    left: 0px;
+  }
+}
+.transition-left {
+  animation-name: move-left;
+  animation-duration: 3s;
+}
 
-@media(max-width: 1180px){
-  .slider-wrapper{
+@media (max-width: 1180px) {
+  .slider-wrapper {
     max-width: 580px;
   }
-  .slider-pets{
-    left:-580px;
-    position:static;
-
+  .slider-pets {
+    left: -580px;
+    position: static;
   }
-  .card-pets{
+  .card-pets {
     margin-left: 0px;
     margin-right: 40px;
   }
-
 }
-@media(max-width: 1035px){
-
-
-  .notonly{
+@media (max-width: 1035px) {
+  .notonly {
     flex-direction: column;
     align-items: center;
   }
-  .notonly-content{
+  .notonly-content {
     margin-top: 60px;
   }
-  .notonly-title{
+  .notonly-title {
     margin-top: 0px;
   }
-  .container{
-   max-width:  $container708;
+  .container {
+    max-width: 708px;
   }
-  .header{
+  .header {
     padding-top: 30px;
     padding-bottom: 0px;
   }
-  .puppy{
+  .puppy {
     max-width: 569px;
     margin-top: 100px;
     max-height: 593px;
     margin-left: auto;
   }
-  .notonly-button{
+  .notonly-button {
     margin: 0 auto;
   }
-  .about{
+  .about {
     flex-direction: column-reverse;
     align-items: center;
     margin-top: 65px;
     margin-bottom: 0px;
   }
-  .about-pets{
+  .about-pets {
     margin-top: 52px;
     margin-bottom: 100px;
   }
-  .about-content{
+  .about-content {
     margin-left: 0px;
   }
-  .help-blocks{
-
+  .help-blocks {
     padding-bottom: 45px;
-
-flex-wrap: wrap;
+    flex-wrap: wrap;
     width: 630px;
   }
-  .block{
+  .block {
     width: 167px;
     margin-bottom: 55px;
     margin-left: 0px;
-margin-right: 0px;
-  }
-  .block1{
-    margin-left: 0px;
-  }
-  .block5{
     margin-right: 0px;
   }
-  .block6{
+  .block1 {
     margin-left: 0px;
   }
-  .block9{
+  .block5 {
     margin-right: 0px;
   }
-  .donation{
+  .block6 {
+    margin-left: 0px;
+  }
+  .block9 {
+    margin-right: 0px;
+  }
+  .donation {
     padding-bottom: 100px;
   }
-  .footer{
+  .footer {
     height: auto;
   }
-  .footer-content{
+  .footer-content {
     flex-wrap: wrap;
     justify-content: space-around;
-
     padding-top: 0px;
   }
-  .donation-container{
+  .donation-container {
     flex-direction: column-reverse;
     align-items: center;
     height: auto;
     width: 505px;
   }
- .donation-title{
-  margin-top: 0px;
- }
-  .donation-dog{
+  .donation-title {
+    margin-top: 0px;
+  }
+  .donation-dog {
     margin-top: 45px;
   }
-  .contacts-title{
+  .contacts-title {
     margin-top: 30px;
   }
-  .adress-title{
+  .adress-title {
     margin-top: 30px;
   }
 }
-@media(max-width: 767px){
-  .logo{
+@media (max-width: 767px) {
+  .logo {
     margin-left: 20px;
   }
-  .nav-list{
+  .nav-list {
     display: none;
   }
   .menu-btn {
@@ -753,7 +916,6 @@ margin-right: 0px;
     cursor: pointer;
     display: inline-block;
     position: relative;
-
     margin-top: 20px;
     margin-right: 20px;
     transition: 0.5s;
@@ -763,9 +925,9 @@ margin-right: 0px;
     width: 30px;
     height: 2px;
     left: 0px;
-    background:#F1CDB3;
+    background: #F1CDB3;
     border-radius: 2px;
-    transition: .3s;
+    transition: 0.3s;
   }
   .btn-line:nth-child(1) {
     top: 0px;
@@ -776,54 +938,49 @@ margin-right: 0px;
   .btn-line:nth-child(3) {
     top: 18px;
   }
-
   .nav-list {
-    position: absolute;
-  position: fixed;
-width: 320px;
-
-    height: 100%;
-    left: 0px;
-    top: 0px;
-    right: 0px;
-    margin-top: 0px;
-    background-color:#292929;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transform: translateX(-100%);
-    transition: 0.5s ;
+    position: fixed;
+    width: 320px;
+    height: 100%;
+    left: auto;
+    top: 0px;
+    right: 0px;
+    margin-top: 0px;
+    background-color: #292929;
+    transform: translateX(100%);
+    transition: 0.5s;
     padding-top: 100px;
     padding-right: 0px;
     padding-left: 0;
   }
-  .nav-item{
+  .nav-item {
     margin-bottom: 40px;
   }
   .nav-list-open .nav-list {
     transform: translateX(0%);
-
   }
-  .nav-list-open .menu-btn{
+  .nav-list-open .menu-btn {
     transform: rotate(90deg);
     transition: 0.5s;
   }
-
-  .nav-link{
+  .nav-link {
     font-size: 32px;
     margin-left: 0px;
   }
-  .logo{
+  .logo {
     position: relative;
     z-index: 5;
   }
-  .help-title{
+  .help-title {
     font-size: 25px;
     margin-top: 42px;
     margin-bottom: 0px;
   }
-  .help-blocks{
+  .help-blocks {
     margin-top: 42px;
     max-width: 290px;
   }
@@ -832,181 +989,174 @@ width: 320px;
     margin-bottom: 0px;
     height: 117px;
   }
-  .name-block{
+  .name-block {
     font-size: 15px;
     margin-top: 20px;
   }
-  .help-icon{
+  .help-icon {
     width: 50px;
   }
 }
-
-
-@media(max-width: 570px){
-
+@media (max-width: 570px) {
   .notonly-title {
     text-align: center;
-    font-size:7.81vw ;
+    font-size: 7.81vw;
     line-height: 130%;
-
-letter-spacing: 0.06em;
+    letter-spacing: 0.06em;
   }
-  .notonly-text{
+  .notonly-text {
     margin-left: 15px;
     margin-right: 10px;
   }
-  .notonly-text__s{
+  .notonly-text__s {
     display: inline-block;
     text-align: center;
   }
-  .puppy{
+  .puppy {
     width: 81.25vw;
-   height: 271px;
+    height: 271px;
     margin-top: 105px;
     margin-right: 10px;
   }
-  .about{
-    max-width: $container270;
+  .about {
+    max-width: 270px;
     margin: 0 auto;
   }
-  .about-title{
-font-size: 25px;
-justify-content: center;
-text-align: center;
-margin-top: 25px;
+  .about-title {
+    font-size: 25px;
+    justify-content: center;
+    text-align: center;
+    margin-top: 25px;
   }
-  .about-text{
+  .about-text {
     text-align: justify;
     margin-top: 25px;
     margin-bottom: 0;
   }
-  .about-pets{
+  .about-pets {
     background-size: cover;
-  margin: 0 auto;
+    margin: 0 auto;
     margin-top: 40px;
     width: 260px;
     height: 353px;
-
   }
-  .friends{
+  .friends {
     height: auto;
-    padding-bottom:42px ;
+    padding-bottom: 42px;
   }
-  .friends-title_block{
+  .friends-title_block {
     padding-top: 48px;
     padding-bottom: 18px;
   }
-  .friends-title{
+  .friends-title {
     font-size: 25px;
     margin-top: 35px;
   }
-  .slider-wrapper{
+  .slider-wrapper {
     max-width: 270px;
   }
-  .slider{
+  .slider {
     position: relative;
-align-items: flex-end;
-justify-content: center;
-height: 507px;
+    align-items: flex-end;
+    justify-content: center;
+    height: 507px;
   }
-  .card-pets{
+  .card-pets {
     height: 435px;
     margin-bottom: 72px;
   }
-  .btn-left{
-   position: absolute;
-   left:65px
-  }
-  .btn-right{
+  .btn-left {
     position: absolute;
-    right:65px
-   }
-   .btn-get__know{
+    left: 65px;
+  }
+  .btn-right {
+    position: absolute;
+    right: 65px;
+  }
+  .btn-get__know {
     margin-top: 40px;
-
-   }
-   .help-blocks{
+  }
+  .help-blocks {
     padding-bottom: 12px;
-   }
-   .donation{
+  }
+  .donation {
     padding-top: 42px;
     padding-bottom: 42px;
-   }
-   .donation-container{
-    width: 300px
-   }
-   .donation-content{
+  }
+  .donation-container {
+    width: 300px;
+  }
+  .donation-content {
     align-items: center;
-   width: 300px;
-   }
-   .donation-title{
+    width: 300px;
+  }
+  .donation-title {
     font-size: 25px;
     text-align: center;
     margin-bottom: 23px;
-   }
-   .donation-subheading{
+  }
+  .donation-subheading {
     letter-spacing: 0;
     margin-bottom: 23px;
-   }
-   .donation-text{
+  }
+  .donation-text {
     text-align: justify;
     width: 280px;
     margin-top: 5px;
-   }
-   .donation-creditcard{
+  }
+  .donation-creditcard {
     display: none;
-   }
-   .donation-creditcard-mob{
+  }
+  .donation-creditcard-mob {
     display: inline-block;
     background-image: url("../../assets/icons/Credit card-mob.svg");
     width: 281px;
     height: 43px;
     margin-bottom: 10px;
     cursor: pointer;
-   }
-   .donation-dog{
-width: 260px;
-height: 135px;
-margin-top: 30px;
-   }
-   .footer{
+  }
+  .donation-dog {
+    width: 260px;
+    height: 135px;
+    margin-top: 30px;
+  }
+  .footer {
     font-size: 25px;
-   }
-   .footer-content{
+  }
+  .footer-content {
     width: 300px;
     margin: 0 auto;
-   }
-   .contacts-title{
+  }
+  .contacts-title {
     font-size: 25px;
     text-align: center;
-   }
-   .adress-title{
+  }
+  .adress-title {
     font-size: 25px;
     text-align: center;
     margin-top: 5px;
-   }
-   .footer-puppy{
+  }
+  .footer-puppy {
     background-size: cover;
     width: 260px;
     height: 269px;
-   }
-   .email{
+  }
+  .email {
     margin-left: 15px;
     margin-top: 10px;
-   }
-  .phone{
+  }
+  .phone {
     margin-left: 15px;
   }
-  .adress-title__block{
+  .adress-title__block {
     margin: 0 auto;
     margin-bottom: 40px;
     width: 250px;
   }
-  .adress-street{
+  .adress-street {
     margin-bottom: 35px;
   }
-  .adress-sity{
+  .adress-sity {
     margin-bottom: 15px;
   }
-}
-*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

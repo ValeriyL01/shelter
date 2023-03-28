@@ -1,7 +1,16 @@
 const btn = document.querySelector(".menu-btn");
 const nav = document.querySelector(".nav");
-const body = document.querySelectorAll(".body")
+const navLink = document.querySelectorAll(".nav-link")
+const body = document.querySelector(".body")
 btn.addEventListener("click", function () {
     nav.classList.toggle("nav-list-open");
-   
+    body.classList.toggle("body-lock")
 });
+
+navLink.forEach(el => {
+    el.addEventListener("click", function () {
+        nav.classList.remove("nav-list-open");
+        body.classList.remove("body-lock")
+    });
+    
+})

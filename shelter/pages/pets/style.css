@@ -18,6 +18,10 @@ li {
   max-width: 1200px;
 }
 
+.body-lock {
+  overflow: hidden;
+}
+
 .container-header {
   margin-bottom: 30px;
 }
@@ -116,10 +120,14 @@ li {
   max-width: 270px;
   background-color: #FAFAFA;
   margin-top: 30px;
+  transition: 0.5s;
   cursor: pointer;
 }
 .card-pets:hover {
-  box-shadow: 1px 1px 1px #CDCDCD;
+  box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
+}
+.card-pets:hover .btn-pets {
+  background: #FDDCC4;
 }
 
 .name-pets {
@@ -423,63 +431,59 @@ li {
   display: none;
 }
 
-/*
-@media(max-width: 1140px){
-  .container{
+@media (max-width: 1140px) {
+  .container {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .pets-cards{
+  .pets-cards {
     max-width: 580px;
     margin: 0 auto;
     height: 1380px;
     overflow: hidden;
   }
-  .pets-title{
-    margin-bottom:0px ;
+  .pets-title {
+    margin-bottom: 0px;
   }
-  .button-pagination{
+  .button-pagination {
     margin-top: 55px;
     padding-bottom: 75px;
   }
 }
-@media(max-width:1000px){
-  .footer{
+@media (max-width: 1000px) {
+  .footer {
     height: auto;
   }
-  .footer-content{
+  .footer-content {
     flex-wrap: wrap;
     justify-content: space-around;
-
     padding-top: 0px;
   }
-  .donation-container{
+  .donation-container {
     flex-direction: column-reverse;
     align-items: center;
     height: auto;
     width: 505px;
   }
-
-  .contacts-title{
+  .contacts-title {
     margin-top: 30px;
   }
-  .adress-title{
+  .adress-title {
     margin-top: 30px;
   }
 }
-@media(max-width: 767px){
-  .logo{
-
+@media (max-width: 767px) {
+  .logo {
     position: relative;
     z-index: 5;
     margin-left: 10px;
-    left:10px
+    left: 10px;
   }
-  .text{
+  .text {
     position: relative;
     z-index: 5;
   }
-  .nav-list{
+  .nav-list {
     display: none;
   }
   .menu-btn {
@@ -490,7 +494,6 @@ li {
     cursor: pointer;
     display: inline-block;
     position: relative;
-
     margin-top: 20px;
     margin-right: 10px;
     transition: 0.5s;
@@ -500,9 +503,9 @@ li {
     width: 30px;
     height: 2px;
     left: 0px;
-    background:black;
+    background: black;
     border-radius: 2px;
-    transition: .3s;
+    transition: 0.3s;
   }
   .btn-line:nth-child(1) {
     top: 0px;
@@ -513,115 +516,103 @@ li {
   .btn-line:nth-child(3) {
     top: 18px;
   }
-
   .nav-list {
     position: absolute;
-  position: fixed;
-width: 320px;
-
+    position: fixed;
+    width: 320px;
     height: 100%;
-    left: 0px;
+    left: auto;
     top: 0px;
     right: 0px;
     margin-top: 0px;
-    background-color:#292929;
+    background-color: #292929;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transform: translateX(-100%);
-    transition: 0.5s ;
+    transform: translateX(100%);
+    transition: 0.5s;
     padding-top: 100px;
     padding-right: 0px;
     padding-left: 0;
   }
-  .nav-item{
+  .nav-item {
     margin-bottom: 40px;
-
   }
-  .nav-link{
-    &:hover{
-      color:#F6F6F6
-    }
-    &:active{
-      color: #F6F6F6;
-      border-bottom: 3px solid #F1CDB3 ;
-      }
+  .nav-link:hover {
+    color: #F6F6F6;
+  }
+  .nav-link:active {
+    color: #F6F6F6;
+    border-bottom: 3px solid #F1CDB3;
   }
   .nav-list-open .nav-list {
     transform: translateX(0%);
-
   }
-  .nav-list-open .menu-btn{
+  .nav-list-open .menu-btn {
     transform: rotate(90deg);
     transition: 0.5s;
   }
-
-  .nav-link{
+  .nav-link {
     font-size: 32px;
     margin-left: 0px;
   }
-
 }
-@media(max-width: 641px){
-  .container{
+@media (max-width: 641px) {
+  .container {
     padding-left: 10px;
     padding-right: 10px;
   }
-
-  .logo{
+  .logo {
     margin-left: 0px;
   }
-
-   .footer-content{
+  .footer-content {
     width: 300px;
     margin: 0 auto;
-   }
-   .contacts-title{
+  }
+  .contacts-title {
     font-size: 25px;
     text-align: center;
-   }
-   .adress-title{
+  }
+  .adress-title {
     font-size: 25px;
     text-align: center;
     margin-top: 5px;
-   }
-   .footer-puppy{
+  }
+  .footer-puppy {
     background-size: cover;
     width: 260px;
     height: 269px;
-   }
-   .email{
+  }
+  .email {
     margin-left: 15px;
     margin-top: 10px;
-   }
-  .phone{
+  }
+  .phone {
     margin-left: 15px;
   }
-  .adress-title__block{
+  .adress-title__block {
     margin: 0 auto;
     margin-bottom: 40px;
     width: 250px;
   }
-  .adress-street{
+  .adress-street {
     margin-bottom: 35px;
   }
-  .adress-sity{
+  .adress-sity {
     margin-bottom: 15px;
   }
 }
-
-@media(max-width: 560px){
-  .pets-title{
+@media (max-width: 560px) {
+  .pets-title {
     font-size: 25px;
     padding-top: 42px;
     margin-bottom: 10px;
   }
-  .pets-cards{
+  .pets-cards {
     max-width: 270px;
   }
-  .button-pagination{
+  .button-pagination {
     padding-bottom: 42px;
   }
-}
-*//*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */

@@ -22,6 +22,10 @@ $container: 1200px;
  
  
 }
+.body-lock{
+  overflow: hidden;
+ 
+}
 .container-header{
   margin-bottom: 30px;
 }
@@ -116,10 +120,15 @@ padding-top: 80px;
   max-width: 270px;
   background-color: #FAFAFA;
   margin-top: 30px;
-  
+  transition: 0.5s;
   cursor: pointer;
   &:hover{
-    box-shadow: 1px 1px 1px #CDCDCD;
+    box-shadow: 0px 0px 10px 2px rgba(34, 60, 80, 0.2);
+  }
+  &:hover{
+    .btn-pets{
+      background: #FDDCC4;
+    }
   }
 }
 .name-pets {
@@ -408,7 +417,7 @@ align-items: center;
 .menu-btn {
   display: none;
 }
-/*
+
 @media(max-width: 1140px){
   .container{
     padding-left: 30px;
@@ -505,7 +514,7 @@ align-items: center;
 width: 320px;
 
     height: 100%;
-    left: 0px;
+    left: auto;
     top: 0px;
     right: 0px;
     margin-top: 0px;
@@ -514,7 +523,7 @@ width: 320px;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    transform: translateX(-100%);
+    transform: translateX(100%);
     transition: 0.5s ;
     padding-top: 100px;
     padding-right: 0px;
@@ -609,4 +618,3 @@ width: 320px;
     padding-bottom: 42px;
   }
 }
-*/
