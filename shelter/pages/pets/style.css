@@ -107,10 +107,11 @@ li {
   padding-top: 80px;
 }
 
-.pets-cards {
+.pagination {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  max-width: 1200px;
 }
 
 .card-pets {
@@ -128,6 +129,10 @@ li {
 }
 .card-pets:hover .btn-pets {
   background: #FDDCC4;
+}
+
+.images-pets {
+  width: 270px;
 }
 
 .name-pets {
@@ -220,7 +225,7 @@ li {
   border-color: #CDCDCD;
 }
 
-.btn-number_pag {
+.number-pag {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -239,10 +244,10 @@ li {
   line-height: 115%;
   color: #292929;
 }
-.btn-number_pag:hover {
+.number-pag:hover {
   background: #FDDCC4;
 }
-.btn-number_pag:disabled {
+.number-pag:disabled {
   color: #CDCDCD;
   border-color: #CDCDCD;
 }
@@ -431,12 +436,187 @@ li {
   display: none;
 }
 
+.popup {
+  display: inline-block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: rgba(41, 41, 41, 0.6);
+  top: 0;
+  left: 0;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.popup_open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+}
+
+.popup-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 975px;
+  margin: 0 auto;
+  min-height: 100%;
+}
+
+.btn-popup {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border: 2px solid #F1CDB3;
+  border-radius: 100px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.btn-popup:hover {
+  background: #FDDCC4;
+}
+
+.popup_body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+  width: 900px;
+  height: 500px;
+  margin: 0 auto;
+  background-color: #FFFFFF;
+  padding: 30px 10px;
+  font-family: "Georgia";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 115%;
+  letter-spacing: 0.06em;
+  color: #000000;
+  border-radius: 10px;
+}
+
+.images-pets_popup {
+  width: 500px;
+  height: 500px;
+}
+
+.pets-description {
+  width: 350px;
+}
+
+.name {
+  margin-top: 0px;
+  margin-bottom: 20px;
+  font-size: 35px;
+  line-height: 110%;
+}
+
+.type {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-size: 20px;
+  line-height: 110%;
+}
+
+.breed {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 110%;
+}
+
+.age {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.age-pets {
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.inoculations {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.inoculations-pets {
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.diseases {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.diseases-pets {
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.parasites {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  font-weight: 700;
+  line-height: 110%;
+}
+
+.parasites-pets {
+  font-weight: 400;
+  line-height: 110%;
+}
+
+.description-block {
+  display: flex;
+  align-items: center;
+}
+
+.img-dot {
+  margin-top: 0px;
+  padding-right: 10px;
+}
+
+.description-block {
+  margin-bottom: 10px;
+}
+
+@keyframes pagination {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.pagination-none {
+  animation-name: pagination;
+  animation-duration: 0.5s;
+}
+
 @media (max-width: 1140px) {
   .container {
     padding-left: 30px;
     padding-right: 30px;
   }
-  .pets-cards {
+  .pagination {
     max-width: 580px;
     margin: 0 auto;
     height: 1380px;
@@ -448,6 +628,21 @@ li {
   .button-pagination {
     margin-top: 55px;
     padding-bottom: 75px;
+  }
+  .popup-wrapper {
+    width: 700px;
+  }
+  .popup_body {
+    height: 350px;
+    width: 630px;
+  }
+  .images-pets_popup {
+    width: 350px;
+    height: 350px;
+  }
+  .name {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 1000px) {
@@ -557,6 +752,21 @@ li {
     font-size: 32px;
     margin-left: 0px;
   }
+  .popup-wrapper {
+    width: 325px;
+  }
+  .popup_body {
+    height: 400px;
+    width: 240px;
+    border-radius: 5px;
+  }
+  .images-pets_popup {
+    display: none;
+  }
+  .name {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 @media (max-width: 641px) {
   .container {
@@ -609,7 +819,7 @@ li {
     padding-top: 42px;
     margin-bottom: 10px;
   }
-  .pets-cards {
+  .pagination {
     max-width: 270px;
   }
   .button-pagination {

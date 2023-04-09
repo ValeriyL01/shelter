@@ -314,6 +314,10 @@ li {
   margin-top: 25px;
 }
 
+.img-carusel {
+  width: 270px;
+}
+
 .btn-pets {
   width: 187px;
   height: 52px;
@@ -639,6 +643,11 @@ li {
   visibility: hidden;
 }
 
+.popup_open {
+  opacity: 1;
+  visibility: visible;
+}
+
 .popup-container {
   display: flex;
   align-items: center;
@@ -650,7 +659,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 952px;
+  width: 975px;
   margin: 0 auto;
   min-height: 100%;
 }
@@ -688,10 +697,10 @@ li {
   line-height: 115%;
   letter-spacing: 0.06em;
   color: #000000;
+  border-radius: 10px;
 }
 
 .images-pets_popup {
-  background-image: url("../../assets/images/jennifer.png");
   width: 500px;
   height: 500px;
 }
@@ -701,7 +710,7 @@ li {
 }
 
 .name {
-  margin-top: 50px;
+  margin-top: 0px;
   margin-bottom: 20px;
   font-size: 35px;
   line-height: 110%;
@@ -722,8 +731,8 @@ li {
 }
 
 .age {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-weight: 700;
   line-height: 110%;
 }
@@ -746,8 +755,8 @@ li {
 }
 
 .diseases {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-weight: 700;
   line-height: 110%;
 }
@@ -758,8 +767,8 @@ li {
 }
 
 .parasites {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
   font-weight: 700;
   line-height: 110%;
 }
@@ -767,6 +776,20 @@ li {
 .parasites-pets {
   font-weight: 400;
   line-height: 110%;
+}
+
+.description-block {
+  display: flex;
+  align-items: center;
+}
+
+.img-dot {
+  margin-top: 0px;
+  padding-right: 10px;
+}
+
+.description-block {
+  margin-bottom: 10px;
 }
 
 @keyframes move-right {
@@ -797,15 +820,39 @@ li {
 
 @media (max-width: 1180px) {
   .slider-wrapper {
-    max-width: 580px;
+    max-width: 620px;
   }
   .slider-pets {
-    left: -580px;
-    position: static;
+    left: -620px;
+    position: relative;
   }
   .card-pets {
     margin-left: 0px;
     margin-right: 40px;
+  }
+  @keyframes move-right {
+    from {
+      left: -620px;
+    }
+    to {
+      left: -1240px;
+    }
+  }
+  .transition-right {
+    animation-name: move-right;
+    animation-duration: 3s;
+  }
+  @keyframes move-left {
+    from {
+      left: -620px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  .transition-left {
+    animation-name: move-left;
+    animation-duration: 3s;
   }
 }
 @media (max-width: 1035px) {
@@ -899,6 +946,21 @@ li {
   }
   .adress-title {
     margin-top: 30px;
+  }
+  .popup-wrapper {
+    width: 700px;
+  }
+  .popup_body {
+    height: 350px;
+    width: 630px;
+  }
+  .images-pets_popup {
+    width: 350px;
+    height: 350px;
+  }
+  .name {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 767px) {
@@ -995,6 +1057,21 @@ li {
   }
   .help-icon {
     width: 50px;
+  }
+  .popup-wrapper {
+    width: 325px;
+  }
+  .popup_body {
+    height: 400px;
+    width: 240px;
+    border-radius: 5px;
+  }
+  .images-pets_popup {
+    display: none;
+  }
+  .name {
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 }
 @media (max-width: 570px) {
@@ -1158,5 +1235,40 @@ li {
   }
   .adress-sity {
     margin-bottom: 15px;
+  }
+  .slider-wrapper {
+    max-width: 270px;
+  }
+  .slider-pets {
+    left: -300px;
+    position: relative;
+  }
+  .card-pets {
+    margin-left: 0px;
+    margin-right: 20px;
+  }
+  @keyframes move-right {
+    from {
+      left: -300px;
+    }
+    to {
+      left: -600px;
+    }
+  }
+  .transition-right {
+    animation-name: move-right;
+    animation-duration: 2s;
+  }
+  @keyframes move-left {
+    from {
+      left: -300px;
+    }
+    to {
+      left: 0px;
+    }
+  }
+  .transition-left {
+    animation-name: move-left;
+    animation-duration: 2s;
   }
 }/*# sourceMappingURL=style.css.map */
